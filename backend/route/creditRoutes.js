@@ -4,7 +4,8 @@ import { uploadXML } from "../controller/creditController.js";
 import CreditReport from "../model/creditModel.js";
 
 const router = express.Router();
-const upload = multer(); // stores file in memory
+const storage = multer.memoryStorage();
+const upload = multer({ storage }); // stores file in memory
 
 router.post("/upload", upload.single("file"), uploadXML);
 
