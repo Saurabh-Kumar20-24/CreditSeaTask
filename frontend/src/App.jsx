@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     const fetchReport = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/reports"); // adjust if needed
+        const res = await axios.get("https://creditseatask-1.onrender.com/api/reports"); // adjust if needed
          console.log("Fetched report data:", res.data);
         const data = res.data[0]; // assuming API returns array of reports
         setReport(data);
