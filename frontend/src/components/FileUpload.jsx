@@ -23,7 +23,7 @@ const FileUpload = ({ onUploadSuccess }) => {
 
     try {
       setLoading(true);
-      const res = await axios.post("https://creditseatask-1.onrender.com/api/reports/upload", formData, {
+      const res = await axios.post("https://creditseatask-1.onrender.com/api/reports", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
